@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { DetailLayout, DraftBlock } from "@/components/detail-layout";
 import { projects } from "@/data/portfolio";
 
-export const metadata: Metadata = { title: "Selected Work | Elaina Julia Madrid", description: "A case study draft from Elaina Julia Madrid’s virtual assistant portfolio." };
+export const metadata: Metadata = { title: "Selected Work | Jorgilla Fernandez", description: "A case study draft from Jorgilla Fernandez’s virtual assistant portfolio." };
 export function generateStaticParams() { return projects.map(({ slug }) => ({ slug })); }
 
 export default async function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {

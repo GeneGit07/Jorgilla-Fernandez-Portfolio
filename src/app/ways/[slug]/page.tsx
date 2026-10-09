@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { DetailLayout, DraftBlock } from "@/components/detail-layout";
 import { supportOptions } from "@/data/portfolio";
 
-export const metadata: Metadata = { title: "Ways to Work Together | Elaina Julia Madrid", description: "Draft engagement details for working with Elaina Julia Madrid." };
+export const metadata: Metadata = { title: "Ways to Work Together | Jorgilla Fernandez", description: "Draft engagement details for working with Jorgilla Fernandez." };
 export function generateStaticParams() { return supportOptions.map(({ slug }) => ({ slug })); }
 
 export default async function WaysToWorkPage({ params }: { params: Promise<{ slug: string }> }) {
