@@ -1,32 +1,5 @@
-const services = [
-  { number: "01", title: "Executive support", text: "A little more order around your day, from inbox and calendar organization to thoughtful meeting preparation.", items: ["Inbox organization", "Calendar coordination", "Meeting preparation"] },
-  { number: "02", title: "Operations & projects", text: "Keep the details moving with clear coordination, careful follow-through, and useful systems.", items: ["Project tracking", "Research", "Process documentation"] },
-  { number: "03", title: "Client experience", text: "Make every touchpoint feel considered with responsive communication and reliable admin support.", items: ["Client communications", "CRM updates", "Document preparation"] },
-];
-
-const examples = [
-  { number: "01", category: "SAMPLE CONCEPT · OPERATIONS", title: "A calmer week,\nby design.", note: "Example project — replace with a real client story.", tone: "sand", mark: "01" },
-  { number: "02", category: "SAMPLE CONCEPT · CLIENT CARE", title: "The details\nthat delight.", note: "Example project — replace with a real client story.", tone: "rose", mark: "02" },
-  { number: "03", category: "SAMPLE CONCEPT · ADMIN SUPPORT", title: "Room for the\nbig picture.", note: "Example project — replace with a real client story.", tone: "lilac", mark: "03" },
-];
-
-const steps = [
-  { number: "01", title: "Start with a conversation", text: "Share what is taking up your time and what kind of support would make a difference." },
-  { number: "02", title: "Shape the support", text: "Together, clarify the priorities, tools, and working rhythm that suit your needs." },
-  { number: "03", title: "Make room to focus", text: "Settle into a thoughtful routine, with clear communication and steady follow-through." },
-];
-
-const questions = [
-  { q: "What can I delegate?", a: "The service areas above are starting points. We can discuss your recurring admin, coordination, and client support needs and decide what fits." },
-  { q: "How do we get started?", a: "Send a note with a little context about your business and what you would like help with. We can take it from there." },
-  { q: "Are these work samples real client projects?", a: "No. The portfolio cards are clearly marked sample concepts because no client work or case studies have been provided yet." },
-];
-
-const supportOptions = [
-  { label: "01 / ONGOING SUPPORT", title: "Monthly partnership", detail: "Add scope, hours, and rate" },
-  { label: "02 / FLEXIBLE SUPPORT", title: "Hourly assistance", detail: "Add hourly rate and minimum" },
-  { label: "03 / BUILT AROUND YOU", title: "Custom support", detail: "Add project or package details" },
-];
+import Link from "next/link";
+import { projects, questions, services, steps, supportOptions } from "@/data/portfolio";
 
 function DraftPrompt({ label = "What to add later", copy }: { label?: string; copy: string }) {
   return <details className="draft-prompt"><summary>{label}<span aria-hidden="true">＋</span></summary><p>{copy}</p></details>;
@@ -77,7 +50,7 @@ export default function Home() {
         <div className="section-shell services-shell">
           <div className="section-label"><span>02</span> THE SUPPORT</div>
           <div className="services-heading"><h2>Space for your<br /><em>best work.</em></h2><p>Practical, flexible support for the moving parts of your business. These are example service areas to tailor to Elaina’s actual offerings.</p></div>
-          <div className="service-list">{services.map((service) => <article className="service-row" key={service.number}><div className="service-number">{service.number}</div><div className="service-main"><h3>{service.title}</h3><p>{service.text}</p><DraftPrompt label="Add your details" copy="Tell me which tasks you actually offer in this area, the tools or skills involved, and any boundaries or specialties to mention." /></div><ul>{service.items.map((item) => <li key={item}>{item}</li>)}</ul><span className="service-arrow" aria-hidden="true">↗</span></article>)}</div>
+          <div className="service-list">{services.map((service) => <Link className="service-row" href={`/services/${service.slug}`} key={service.number}><div className="service-number">{service.number}</div><div className="service-main"><h3>{service.title}</h3><p>{service.text}</p></div><ul>{service.items.map((item) => <li key={item}>{item}</li>)}</ul><span className="service-arrow" aria-hidden="true">↗</span></Link>)}</div>
           <p className="fine-print">EXAMPLE OFFERINGS · SERVICES CAN BE REFINED TO MATCH YOUR EXPERIENCE AND CLIENT NEEDS</p>
         </div>
       </section>
@@ -85,7 +58,7 @@ export default function Home() {
       <section className="work section-shell" id="work">
         <div className="section-label"><span>03</span> SELECTED WORK</div>
         <div className="work-heading"><h2>Care in the<br /><em>little things.</em></h2><p>Good support is often felt in the details. Here are sample project directions; replace these with real work when ready.</p></div>
-        <div className="work-grid">{examples.map((item) => <article className="work-card" key={item.number}><div className={`work-art ${item.tone}`}><span className="work-art-number">{item.mark}</span><span className="work-art-orbit" /><span className="work-art-shape" /><span className="work-art-caption">SAMPLE<br />PROJECT</span></div><div className="work-meta"><div><span className="work-category">{item.category}</span><h3>{item.title.split("\n").map((line) => <span key={line}>{line}<br /></span>)}</h3></div><span className="work-arrow" aria-hidden="true">↗</span></div><p className="work-note">{item.note}</p><DraftPrompt label="Build this case study" copy="Send the project name, client or industry (if shareable), the challenge, what you handled, and the outcome. You can attach a screenshot, document crop, or project image. Please remove private client data or confirm you have permission to share it." /></article>)}</div>
+        <div className="work-grid">{projects.map((item) => <Link className="work-card" href={`/work/${item.slug}`} key={item.number} aria-label={`View case study draft: ${item.title}`}><div className={`work-art ${item.tone}`}><span className="work-art-number">{item.mark}</span><span className="work-art-orbit" /><span className="work-art-shape" /><span className="work-art-caption">SAMPLE<br />PROJECT</span></div><div className="work-meta"><div><span className="work-category">{item.category}</span><h3>{item.title}</h3></div><span className="work-arrow" aria-hidden="true">↗</span></div><p className="work-note">{item.note}</p></Link>)}</div>
       </section>
 
       <section className="process" id="process"><div className="section-shell process-shell">
@@ -105,7 +78,7 @@ export default function Home() {
 
       <section className="ways section-shell" id="ways">
         <div className="section-label"><span>07</span> WAYS TO WORK TOGETHER</div><div className="ways-heading"><h2>Support that<br /><em>fits your needs.</em></h2><p>Choose the structure that matches how you want to work. Add your confirmed details and pricing when ready.</p></div>
-        <div className="ways-grid">{supportOptions.map((option) => <article className="way-card" key={option.label}><span>{option.label}</span><h3>{option.title}</h3><p>{option.detail}</p><i>DETAILS TO COME</i><DraftPrompt label="Add package details" copy="Tell me whether this option is something you offer, plus the scope, hours, minimum commitment, rate, and what a client receives." /></article>)}</div>
+        <div className="ways-grid">{supportOptions.map((option) => <Link className="way-card" href={`/ways/${option.slug}`} key={option.label}><span>{option.label}</span><h3>{option.title}</h3><p>{option.detail}</p><i>VIEW DETAILS <b aria-hidden="true">↗</b></i></Link>)}</div>
         <p className="fine-print">EXAMPLE ENGAGEMENT TYPES · CONFIRM YOUR OFFERINGS AND RATES BEFORE PUBLISHING</p>
       </section>
 

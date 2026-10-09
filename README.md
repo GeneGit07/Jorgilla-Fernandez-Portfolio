@@ -13,7 +13,7 @@ Then open [http://localhost:3000](http://localhost:3000).
 
 ## Before publishing
 
-The site includes fill-in sections for testimonials, tools, engagement options, and ideal clients. Replace each placeholder with confirmed information before publishing. The work cards are sample concepts, not real client case studies.
+The site includes fill-in sections for testimonials, tools, engagement options, and ideal clients. Replace each placeholder with confirmed information before publishing. The work cards are sample concepts, not real client case studies. Work, service, and engagement cards link to dedicated draft detail pages.
 
 The small expandable “What to add later” notes across the page are content prompts for updating each section. They describe useful text and optional images to provide (such as an approved portrait, work sample, or testimonial image).
 
