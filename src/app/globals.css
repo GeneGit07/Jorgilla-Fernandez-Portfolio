@@ -21,6 +21,160 @@
 @media(min-width:1500px){.hero{padding-left:max(11.5%,calc((100vw - 1150px)/2));padding-right:max(11.5%,calc((100vw - 1150px)/2))}}
 @media(max-width:780px) and (min-width:651px){.main-nav{gap:11px;font-size:8px}.main-nav>a[href="#work"],.main-nav>a[href="#testimonials"],.main-nav>a[href="#process"]{display:none}.site-header{padding:0 19px}}
 
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.theme-toggle { width: 38px; height: 38px; flex: 0 0 38px; display: grid; place-items: center; border: 1px solid #cbbbda; border-radius: 50%; background: rgba(255,255,255,.72); color: #593773; font: 18px/1 var(--sans); cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+.theme-toggle:hover { background: var(--plum); color: #fff; border-color: var(--plum); }
+.theme-toggle:focus-visible { outline: 2px solid #8e70a9; outline-offset: 3px; }
+
+html[data-theme="dark"] {
+	color-scheme: dark;
+	--paper: #17141c;
+	--white: #211c27;
+	--ink: #f2edf5;
+	--plum: #b99acb;
+	--plum-deep: #2b2035;
+	--mauve: #d1b5e2;
+	--rose: #352b3e;
+	--rose-pale: #28222f;
+	--sand: #c6a96f;
+	--line: #43394b;
+	--muted: #b9afc1;
+}
+
+html[data-theme="dark"] body { background: var(--paper); color: var(--ink); }
+html[data-theme="dark"] ::selection { background: #59446b; color: #fff; }
+html[data-theme="dark"] a:focus-visible,
+html[data-theme="dark"] summary:focus-visible,
+html[data-theme="dark"] .service-row:focus-visible,
+html[data-theme="dark"] .work-card:focus-visible,
+html[data-theme="dark"] .way-card:focus-visible { outline-color: #d1b5e2; }
+html[data-theme="dark"] .site-header { background: rgba(29,24,35,.92); border-color: rgba(209,181,226,.2); box-shadow: 0 8px 30px rgba(0,0,0,.24); }
+html[data-theme="dark"] .brand-monogram { border-color: #8c789b; color: #f2edf5; }
+html[data-theme="dark"] .brand-monogram span,
+html[data-theme="dark"] .nav-contact,
+html[data-theme="dark"] .mobile-contact { color: #d4b878; }
+html[data-theme="dark"] .brand-name > span,
+html[data-theme="dark"] .main-nav { color: #c4b8cb; }
+html[data-theme="dark"] .main-nav > a:not(.nav-contact):hover,
+html[data-theme="dark"] .footer-top:hover,
+html[data-theme="dark"] .detail-back:hover,
+html[data-theme="dark"] .mobile-menu-panel a:hover { color: #e6d4f2; }
+html[data-theme="dark"] .nav-contact,
+html[data-theme="dark"] .mobile-contact,
+html[data-theme="dark"] .mobile-menu-toggle { border-color: #62536f; }
+html[data-theme="dark"] .nav-contact:hover { background: #b99acb; color: #201827; }
+html[data-theme="dark"] .theme-toggle { background: #302638; border-color: #675774; color: #f4e8b8; }
+html[data-theme="dark"] .theme-toggle:hover { background: #f4e8b8; border-color: #f4e8b8; color: #302638; }
+html[data-theme="dark"] .hero { background: linear-gradient(112deg, #17141c 0%, #201a27 53%, #2a2033 100%); }
+html[data-theme="dark"] .eyebrow,
+html[data-theme="dark"] .section-label,
+html[data-theme="dark"] .hero-note,
+html[data-theme="dark"] .detail-back { color: #c3b4cc; }
+html[data-theme="dark"] .hero h1,
+html[data-theme="dark"] .about h2,
+html[data-theme="dark"] .services h2,
+html[data-theme="dark"] .work h2,
+html[data-theme="dark"] .process h2,
+html[data-theme="dark"] .faq h2,
+html[data-theme="dark"] .contact h2,
+html[data-theme="dark"] .fit h2,
+html[data-theme="dark"] .tools h2,
+html[data-theme="dark"] .ways h2 { color: #f2edf5; }
+html[data-theme="dark"] .hero h1 em,
+html[data-theme="dark"] .about h2 em,
+html[data-theme="dark"] .services h2 em,
+html[data-theme="dark"] .work h2 em,
+html[data-theme="dark"] .process h2 em,
+html[data-theme="dark"] .faq h2 em,
+html[data-theme="dark"] .contact h2 em,
+html[data-theme="dark"] .fit h2 em,
+html[data-theme="dark"] .tools h2 em,
+html[data-theme="dark"] .ways h2 em { color: #d6bee5; }
+html[data-theme="dark"] .hero-lede,
+html[data-theme="dark"] .about-copy p,
+html[data-theme="dark"] .services-heading > p,
+html[data-theme="dark"] .work-heading > p,
+html[data-theme="dark"] .process-heading > p,
+html[data-theme="dark"] .fit-copy > p,
+html[data-theme="dark"] .tools-content > div > p,
+html[data-theme="dark"] .ways-heading > p { color: #c2b8c9; }
+html[data-theme="dark"] .underlined-link,
+html[data-theme="dark"] .text-link { color: #e0d2e8; border-color: #70607c; }
+html[data-theme="dark"] .services,
+html[data-theme="dark"] .process,
+html[data-theme="dark"] .tools,
+html[data-theme="dark"] .testimonials { background: #201b27; }
+html[data-theme="dark"] .service-list,
+html[data-theme="dark"] .service-row,
+html[data-theme="dark"] .faq-list,
+html[data-theme="dark"] .faq details { border-color: #44394d; }
+html[data-theme="dark"] .service-number,
+html[data-theme="dark"] .service-arrow,
+html[data-theme="dark"] .faq summary span,
+html[data-theme="dark"] .work-arrow,
+html[data-theme="dark"] .work-category,
+html[data-theme="dark"] .way-card > span,
+html[data-theme="dark"] .placeholder-box span,
+html[data-theme="dark"] .tool-chips + small,
+html[data-theme="dark"] .tools-note { color: #d1b5e2; }
+html[data-theme="dark"] .service-main h3,
+html[data-theme="dark"] .step h3,
+html[data-theme="dark"] .faq summary,
+html[data-theme="dark"] .work-meta h3,
+html[data-theme="dark"] .way-card h3 { color: #f0e8f5; }
+html[data-theme="dark"] .service-main p,
+html[data-theme="dark"] .step p,
+html[data-theme="dark"] .faq details p,
+html[data-theme="dark"] .way-card p,
+html[data-theme="dark"] .testimonial-credit { color: #c1b7c8; }
+html[data-theme="dark"] .service-row li,
+html[data-theme="dark"] .tool-chips span,
+html[data-theme="dark"] .tool-chips details summary { background: #28222f; border-color: #4a3e54; color: #ded3e5; }
+html[data-theme="dark"] .service-row:hover { background: rgba(255,255,255,.05); }
+html[data-theme="dark"] .step-line { background: #4a3e54; }
+html[data-theme="dark"] .step-line:before { background: #d1b5e2; }
+html[data-theme="dark"] .placeholder-box,
+html[data-theme="dark"] .way-card { background: #25202c; border-color: #453a4e; }
+html[data-theme="dark"] .placeholder-box strong,
+html[data-theme="dark"] .testimonial-content > p { color: #eadff1; }
+html[data-theme="dark"] .placeholder-box small { color: #c1b7c8; }
+html[data-theme="dark"] .tool-chips details[open] summary { border-color: #b99acb; color: #f0e8f5; }
+html[data-theme="dark"] .tool-chips details small { background: #25202c; border-color: #493e52; color: #e2d9e8; }
+html[data-theme="dark"] .draft-prompt { border-color: rgba(209,181,226,.24); color: #c3b4cc; }
+html[data-theme="dark"] .draft-prompt summary { color: #d6bee5; }
+html[data-theme="dark"] .draft-prompt summary:hover { color: #fff; }
+html[data-theme="dark"] .draft-prompt p { color: #c1b7c8; }
+html[data-theme="dark"] .testimonial-content { border-color: #51445c; }
+html[data-theme="dark"] .quote-mark,
+html[data-theme="dark"] .testimonial-credit span { color: #d6bee5; }
+html[data-theme="dark"] .footer { background: #211a28; color: #e8deed; }
+html[data-theme="dark"] .footer-brand .brand-name { color: #fff; }
+html[data-theme="dark"] .footer-legal { border-color: #493d52; color: #cfc2d8; }
+html[data-theme="dark"] .footer-socials button { border-color: #796887; color: #fff; }
+html[data-theme="dark"] .footer-socials button:hover,
+html[data-theme="dark"] .footer-socials button:focus-visible { background: #f0e6f5; border-color: #f0e6f5; color: #302238; }
+html[data-theme="dark"] .detail-hero { background: linear-gradient(115deg, #211a28, #17141c 72%); }
+html[data-theme="dark"] .detail-hero h1 { color: #f2edf5; }
+html[data-theme="dark"] .detail-lede { color: #c2b8c9; }
+html[data-theme="dark"] .detail-meta-grid > div,
+html[data-theme="dark"] .service-detail-grid > div,
+html[data-theme="dark"] .engagement-grid > div { border-color: #453a4e; }
+html[data-theme="dark"] .detail-draft,
+html[data-theme="dark"] .detail-notes { background: #25202c; border-color: #453a4e; color: #e2d9e8; }
+html[data-theme="dark"] .mobile-menu-toggle { background: #302638; color: #f2edf5; }
+html[data-theme="dark"] .mobile-menu-toggle:hover,
+html[data-theme="dark"] .mobile-menu-panel { background: rgba(37,31,44,.98); }
+html[data-theme="dark"] .menu-icon i { background: #f2edf5; }
+html[data-theme="dark"] .mobile-menu-panel { border-color: #493d52; box-shadow: 0 18px 42px rgba(0,0,0,.3); }
+html[data-theme="dark"] .mobile-menu-panel a { border-color: #403547; color: #ece4f0; }
+html[data-theme="dark"] .mobile-menu-panel a > span,
+html[data-theme="dark"] .mobile-menu-panel a > b { color: #d1b5e2; }
+
+@media (max-width: 650px) {
+	.header-actions { gap: 8px; }
+	.theme-toggle { width: 36px; height: 36px; flex-basis: 36px; }
+}
+
 :root {
 	--paper: #faf8fc;
 	--white: #fff;

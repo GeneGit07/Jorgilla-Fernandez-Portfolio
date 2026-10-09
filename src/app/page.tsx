@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MobileMenu } from "@/components/mobile-menu";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { projects, questions, services, steps, supportOptions } from "@/data/portfolio";
 
 function DraftPrompt({ label = "What to add later", copy }: { label?: string; copy: string }) {
@@ -38,7 +39,10 @@ export default function Home() {
             Let’s talk <span aria-hidden="true">↗</span>
           </a>
         </nav>
-        <MobileMenu />
+        <div className="header-actions">
+          <ThemeToggle />
+          <MobileMenu />
+        </div>
       </header>
 
       <section className="hero" id="home" aria-labelledby="hero-title">
