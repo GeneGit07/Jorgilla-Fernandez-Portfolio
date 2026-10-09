@@ -1,11 +1,16 @@
 {
+<<<<<<< HEAD
   "name": "elaina-portfolio",
+=======
+  "name": "Jorgilla Fernandez-portfolio",
+>>>>>>> fb98bd446d973010674d7624cf7779ab2fddcbc0
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+<<<<<<< HEAD
     "lint": "eslint"
   },
   "dependencies": {
@@ -20,5 +25,22 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.6",
     "typescript": "^5"
+=======
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@eslint/eslintrc": "^3.3.1",
+    "eslint": "^9.30.0",
+    "eslint-config-next": "^15.5.0",
+    "typescript": "^5.8.3"
+>>>>>>> fb98bd446d973010674d7624cf7779ab2fddcbc0
   }
 }
