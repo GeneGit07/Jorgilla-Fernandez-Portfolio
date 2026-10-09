@@ -129,12 +129,16 @@ a:focus-visible, summary:focus-visible,
 .form-grid input, .form-grid textarea { border-color: rgba(233,218,243,.3); }
 .form-grid input:focus, .form-grid textarea:focus { border-color: #d6c1e3; box-shadow: 0 0 0 2px rgba(214,193,227,.18); }
 .form-submit small, .contact-placeholder { color: #d4c4dc; }
-.footer { background: #f5f1f8; color: #786f80; }
-.footer-brand .brand-name { color: #493957; }
-.footer-legal { border-color: #e3dbea; color: #83798b; }
+.footer { background: var(--plum); color: #f1e9f0; }
+.footer-brand .brand-name { color: #fff; }
+.footer-brand .brand-name > span { color: #e0d1dc; }
+.footer-brand .brand-monogram { border-color: #d2bdcd; color: #fff; }
+.footer-brand .brand-monogram span { color: #e0b6a4; }
+.footer-legal { border-color: rgba(255,255,255,.24); color: #e1d6e2; }
 .footer-socials { display: flex; align-items: center; gap: 8px; }
-.footer-socials button { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid #d5c8dc; border-radius: 50%; background: transparent; color: #654d70; font: 500 12px var(--sans); cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
-.footer-socials button:hover, .footer-socials button:focus-visible { background: var(--plum); color: #fff; border-color: var(--plum); }
+.footer-socials button { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; background: transparent; color: #fff; font: 500 12px var(--sans); cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+.footer-socials button:hover, .footer-socials button:focus-visible { background: #fff; color: var(--plum); border-color: #fff; }
+.footer-top:hover { color: #eadbdc; }
 
 .detail-hero { background: linear-gradient(115deg, #f0eaf5, #faf8fc 72%); }
 .detail-eyebrow { color: #8b7197; }
