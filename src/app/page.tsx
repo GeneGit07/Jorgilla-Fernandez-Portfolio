@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MobileMenu } from "@/components/mobile-menu";
 import { projects, questions, services, steps, supportOptions } from "@/data/portfolio";
 
 function DraftPrompt({ label = "What to add later", copy }: { label?: string; copy: string }) {
@@ -14,7 +15,7 @@ export default function Home() {
           <a href="#about">About</a><a href="#services">Services</a><a href="#work">Selected work</a><a href="#ways">Ways to work</a><a href="#testimonials">Kind words</a><a href="#process">Process</a>
           <a className="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
         </nav>
-        <a className="mobile-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+        <MobileMenu />
       </header>
 
       <section className="hero" id="home" aria-labelledby="hero-title">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { MobileMenu } from "@/components/mobile-menu";
 
 export function DetailLayout({ eyebrow, title, description, children }: { eyebrow: string; title: string; description: string; children: ReactNode }) {
   return (
@@ -7,7 +8,7 @@ export function DetailLayout({ eyebrow, title, description, children }: { eyebro
       <header className="site-header detail-header">
         <Link className="brand" href="/" aria-label="Elaina Madrid, home"><span className="brand-monogram">E<span>.</span></span><span className="brand-name">ELAINA MADRID<span>VIRTUAL ASSISTANT</span></span></Link>
         <nav className="main-nav" aria-label="Main navigation"><Link href="/#about">About</Link><Link href="/#services">Services</Link><Link href="/#work">Selected work</Link><Link href="/#ways">Ways to work</Link><Link className="nav-contact" href="/#contact">Let’s talk <span aria-hidden="true">↗</span></Link></nav>
-        <Link className="mobile-contact" href="/#contact">Let’s talk <span aria-hidden="true">↗</span></Link>
+        <MobileMenu onDetailPage />
       </header>
       <section className="detail-hero">
         <div className="detail-hero-inner"><Link className="detail-back" href="/">← BACK TO PORTFOLIO</Link><p className="detail-eyebrow">{eyebrow}</p><h1>{title}</h1><p className="detail-lede">{description}</p></div>
