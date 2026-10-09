@@ -4,10 +4,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Elaina Julia Madrid | Virtual Assistant",
   description:
-    "Thoughtful virtual assistance for the people building good things. Meet Elaina Julia Madrid, your calm, capable partner behind the scenes.",
+    "Meet Elaina Julia Madrid, a virtual assistant offering thoughtful support for the details behind your business.",
   openGraph: {
     title: "Elaina Julia Madrid | Virtual Assistant",
-    description: "A little more space to do your best work.",
+    description: "Thoughtful virtual assistance. More ease in the everyday.",
     type: "website",
   },
 };
