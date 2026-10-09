@@ -1,6 +1,2 @@
-<<<<<<< HEAD
-allowBuilds:
-=======
 ﻿allowBuilds:
->>>>>>> fb98bd446d973010674d7624cf7779ab2fddcbc0
   unrs-resolver: true
