@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import portrait from "../../public/images/jorgilla-fernandez.jpeg";
 import { MobileMenu } from "@/components/mobile-menu";
 import { PortfolioIntro } from "@/components/portfolio-intro";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { experiences } from "@/data/portfolio";
+import { experiences, kindWordsImage } from "@/data/portfolio";
 
 export default function Home() {
   return (
@@ -69,9 +70,8 @@ export default function Home() {
 
         <div className="hero-visual">
           <Image
-            src="/images/jorgilla-fernandez.jpeg"
+            src={portrait}
             alt="Portrait of Jorgilla Fernandez in graduation attire."
-            fill
             sizes="(max-width: 650px) 86vw, (max-width: 900px) 44vw, 38vw"
           />
           <div className="hero-image-caption">
@@ -101,9 +101,8 @@ export default function Home() {
             </h2>
             <div className="about-portrait">
               <Image
-                src="/images/jorgilla-fernandez.jpeg"
+                src={portrait}
                 alt="Portrait of Jorgilla Fernandez in graduation attire."
-                fill
                 sizes="(max-width: 650px) 84vw, (max-width: 900px) 40vw, 34vw"
               />
               <span className="glass-image-label">STI COLLEGE TANAUAN</span>
@@ -129,9 +128,13 @@ export default function Home() {
             {experiences.map((experience, index) => (
               <article className="experience-entry" key={experience.title}>
                 <span className="experience-number">0{index + 1}</span>
-                <div className="experience-image">
-                  <Image src={experience.image} alt={experience.imageAlt} fill sizes="(max-width: 650px) 84vw, 38vw" />
-                  <span className="glass-image-label">{experience.imageLabel}</span>
+                <div className="experience-gallery">
+                  {experience.images.map((image) => (
+                    <figure className="experience-image" key={`${experience.title}-${image.label}`}>
+                      <Image src={image.source} alt={image.alt} sizes="(max-width: 650px) 84vw, 20vw" />
+                      <figcaption className="glass-image-label">{image.label}</figcaption>
+                    </figure>
+                  ))}
                 </div>
                 <div>
                   <h3>{experience.title}</h3>
@@ -153,6 +156,10 @@ export default function Home() {
             <p>
               Even as interns, a simple ‘thank you’ means so much to us as hotel staffs. These kind words make us feel appreciated and remind us that we have successfully fulfilled the guests&apos; wants and needs. It gives us a sense of fulfillment and reassurance that we are performing our duties well and providing the quality service that every guest deserves.
             </p>
+            <figure className="kind-words-photo">
+              <Image src={kindWordsImage.source} alt={kindWordsImage.alt} sizes="(max-width: 650px) 84vw, 32vw" />
+              <figcaption className="glass-image-label">{kindWordsImage.label}</figcaption>
+            </figure>
           </div>
         </div>
       </section>

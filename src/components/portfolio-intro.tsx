@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState, type ReactNode } from "react";
+import portrait from "../../public/images/jorgilla-fernandez.jpeg";
 
 export function PortfolioIntro({ children }: { children: ReactNode }) {
   const [isIntroVisible, setIsIntroVisible] = useState(true);
@@ -66,7 +67,7 @@ export function PortfolioIntro({ children }: { children: ReactNode }) {
 
           <div className="portfolio-intro-photo">
             <Image
-              src="/images/jorgilla-fernandez.jpeg"
+              src={portrait}
               alt="Portrait of Jorgilla Fernandez in graduation attire."
               fill
               priority
