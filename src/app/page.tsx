@@ -151,7 +151,7 @@ export default function Home() {
           <div className="testimonial-content">
             <div className="quote-mark">“</div>
             <p>
-              Even as interns, a simple ‘thank you’ means so much to us as hotel staffs. These kind words make us feel appreciated and remind us that we have successfully fulfilled the guests' wants and needs. It gives us a sense of fulfillment and reassurance that we are performing our duties well and providing the quality service that every guest deserves.
+              Even as interns, a simple ‘thank you’ means so much to us as hotel staffs. These kind words make us feel appreciated and remind us that we have successfully fulfilled the guests&apos; wants and needs. It gives us a sense of fulfillment and reassurance that we are performing our duties well and providing the quality service that every guest deserves.
             </p>
           </div>
         </div>
