@@ -3,12 +3,12 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Jorgilla Fernandez | Virtual Assistant",
+  title: "Jorgilla Fernandez | Tourism & Hospitality",
   description:
-    "Meet Jorgilla Fernandez, a virtual assistant offering thoughtful support for the details behind your business.",
+    "Meet Jorgilla Fernandez, a Tourism Management graduate with hands-on experience in hotel front office operations and guest services.",
   openGraph: {
-    title: "Jorgilla Fernandez | Virtual Assistant",
-    description: "Thoughtful virtual assistance. More ease in the everyday.",
+    title: "Jorgilla Fernandez | Tourism & Hospitality",
+    description: "Tourism Management graduate with hands-on experience in hotel front office operations and guest services.",
     type: "website",
   },
 };

@@ -1,22 +1,13 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MobileMenu } from "@/components/mobile-menu";
+import { PortfolioIntro } from "@/components/portfolio-intro";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { projects, questions, services, steps, supportOptions } from "@/data/portfolio";
-
-function DraftPrompt({ label = "What to add later", copy }: { label?: string; copy: string }) {
-  return (
-    <details className="draft-prompt">
-      <summary>
-        {label}
-        <span aria-hidden="true">＋</span>
-      </summary>
-      <p>{copy}</p>
-    </details>
-  );
-}
+import { experiences } from "@/data/portfolio";
 
 export default function Home() {
   return (
+    <PortfolioIntro>
     <main>
       <header className="site-header">
         <a className="brand" href="#home" aria-label="Jorgilla Fernandez, home">
@@ -25,16 +16,13 @@ export default function Home() {
           </span>
           <span className="brand-name">
             JORGILLA FERNANDEZ
-            <span>VIRTUAL ASSISTANT</span>
+            <span>TOURISM &amp; HOSPITALITY</span>
           </span>
         </a>
         <nav className="main-nav" aria-label="Main navigation">
           <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#work">Selected work</a>
-          <a href="#ways">Ways to work</a>
+          <a href="#experiences">Experiences</a>
           <a href="#testimonials">Kind words</a>
-          <a href="#process">Process</a>
           <a className="nav-contact" href="#contact">
             Let’s talk <span aria-hidden="true">↗</span>
           </a>
@@ -48,62 +36,52 @@ export default function Home() {
       <section className="hero" id="home" aria-labelledby="hero-title">
         <div className="hero-copy">
           <div className="eyebrow">
-            <span className="eyebrow-rule" /> THOUGHTFUL VIRTUAL ASSISTANCE
+            <span className="eyebrow-rule" /> TOURISM &amp; HOSPITALITY
           </div>
           <h1 id="hero-title">
-            More ease
+            Care for
             <br />
-            in the <em>everyday.</em>
+            <em>every guest.</em>
           </h1>
           <p className="hero-lede">
-            Considered support for the details behind your business, so you can give your best attention to what matters most.
+            Tourism Management graduate with hands-on experience in front office operations and guest services.
           </p>
+          <div className="hero-facts" aria-label="Hospitality focus">
+            <span>Tourism Management</span>
+            <span>Front Office Operations</span>
+            <span>Guest Services</span>
+          </div>
           <div className="hero-links">
             <a className="button button-plum" href="#contact">
               Explore working together <span aria-hidden="true">↗</span>
             </a>
-            <a className="underlined-link" href="#services">
-              Discover the support <span aria-hidden="true">↓</span>
+            <a className="underlined-link" href="#about">
+              Get to know me <span aria-hidden="true">↓</span>
             </a>
           </div>
           <div className="hero-note">
             <span className="note-star" aria-hidden="true">
               ✳
             </span>{" "}
-            A CALM, CAPABLE PARTNER BEHIND THE SCENES
+            GUEST SERVICE WITH CARE AND PROFESSIONALISM
           </div>
-          <DraftPrompt
-            label="Personalize the introduction"
-            copy="Send the tagline you want to use, the type of clients you want to attract, and an optional portrait photo. A portrait is optional; the abstract artwork can stay."
-          />
         </div>
 
-        <div className="hero-visual" aria-label="Abstract editorial illustration in warm rose and plum tones" role="img">
-          <div className="visual-orbit orbit-one" />
-          <div className="visual-orbit orbit-two" />
-          <div className="visual-sun" />
-          <div className="visual-arch">
-            <div className="arch-inner" />
+        <div className="hero-visual">
+          <Image
+            src="/images/jorgilla-fernandez.jpeg"
+            alt="Portrait of Jorgilla Fernandez in graduation attire."
+            fill
+            sizes="(max-width: 650px) 86vw, (max-width: 900px) 44vw, 38vw"
+          />
+          <div className="hero-image-caption">
+            <span>JORGILLA FERNANDEZ</span>
+            <strong>TOURISM MANAGEMENT GRADUATE</strong>
           </div>
-          <div className="visual-vase">
-            <i />
-            <i />
-            <i />
-            <i />
-            <b />
-          </div>
-          <div className="visual-stone stone-one" />
-          <div className="visual-stone stone-two" />
-          <div className="visual-caption">
-            <span>THE ART OF</span>
-            <strong>making room</strong>
-            <i>✳</i>
-          </div>
-          <span className="visual-index">JF — 01</span>
         </div>
 
         <div className="hero-bottom">
-          <span>INDEPENDENT VIRTUAL ASSISTANT</span>
+          <span>HOSPITALITY &amp; GUEST SERVICES</span>
           <span>
             SCROLL TO EXPLORE <b aria-hidden="true">↓</b>
           </span>
@@ -115,25 +93,26 @@ export default function Home() {
           <span>01</span> A LITTLE ABOUT ME
         </div>
         <div className="about-grid">
-          <h2>
-            Good work needs
-            <br />
-            a little <em>room.</em>
-          </h2>
+          <div className="about-profile">
+            <h2>
+              Good work needs
+              <br />
+              a little <em>room.</em>
+            </h2>
+            <div className="about-portrait">
+              <Image
+                src="/images/jorgilla-fernandez.jpeg"
+                alt="Portrait of Jorgilla Fernandez in graduation attire."
+                fill
+                sizes="(max-width: 650px) 84vw, (max-width: 900px) 40vw, 34vw"
+              />
+              <span className="glass-image-label">STI COLLEGE TANAUAN</span>
+            </div>
+          </div>
           <div className="about-copy">
-            <p className="about-intro">Hello, I’m Jorgilla Fernandez.</p>
             <p>
-              I’m a virtual assistant offering thoughtful support for the work that happens behind the scenes. My approach is simple: listen closely, care about the details, and make the day feel more manageable.
+              I am a graduate of Bachelor of Science in Tourism Management from STI College Tanauan, with hands-on experience in front office operations at JET Hotel Lipa. I have experience managing guest check-ins and check-outs, handling reservations, answering phone calls, and responding to guest inquiries and requests. I am also skilled in preparing reports, issuing key cards and food stubs, and assisting with hotel events and special celebrations. Through my experience, I developed strong communication, customer service, teamwork, and problem-solving skills while maintaining professionalism during regular and graveyard shifts. I am a dedicated, adaptable, and service-oriented individual committed to providing excellent guest experiences and continuously improving my skills in the hospitality industry.
             </p>
-            <p>
-              Whether you need help keeping things organized or a steady hand with the follow-through, we can shape support around your priorities.
-            </p>
-            <a className="text-link" href="#contact">
-              Tell me what you need <span aria-hidden="true">↗</span>
-            </a>
-            <DraftPrompt
-              copy="Send a short bio in your own words: your background, strengths, relevant experience, and the tone you want. If you want a photo here, attach a portrait you have permission to publish."
-            />
           </div>
         </div>
         <div className="about-signature">
@@ -141,187 +120,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="services" id="services">
-        <div className="section-shell services-shell">
-          <div className="section-label">
-            <span>02</span> THE SUPPORT
-          </div>
-          <div className="services-heading">
-            <h2>
-              Space for your
-              <br />
-              <em>best work.</em>
-            </h2>
-            <p>
-              Practical, flexible support for the moving parts of your business. These are example service areas to tailor to Jorgilla Fernandez’s actual offerings.
-            </p>
-          </div>
-
-          <div className="service-list">
-            {services.map((service) => (
-              <Link className="service-row" href={`/services/${service.slug}`} key={service.number}>
-                <div className="service-number">{service.number}</div>
-                <div className="service-main">
-                  <h3>{service.title}</h3>
-                  <p>{service.text}</p>
-                </div>
-                <ul>
-                  {service.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                <span className="service-arrow" aria-hidden="true">
-                  ↗
-                </span>
-              </Link>
-            ))}
-          </div>
-
-          <p className="fine-print">Tailored support for the details behind your business.</p>
-        </div>
-      </section>
-
-      <section className="work" id="work">
+      <section className="experiences" id="experiences">
         <div className="section-shell">
           <div className="section-label">
-            <span>03</span> SELECTED WORK
+            <span>02</span> EXPERIENCES
           </div>
-          <div className="work-heading">
-            <h2>
-              Calm systems,
-              <br />
-              <em>clear outcomes.</em>
-            </h2>
-            <p>Sample concepts that show the type of work and communication you might present in the future.</p>
-          </div>
-
-          <div className="work-grid">
-            {projects.map((project) => (
-              <Link className="work-card" href={`/work/${project.slug}`} key={project.slug}>
-                <div className={`work-art ${project.tone}`} aria-hidden="true">
-                  <span className="work-art-number">{project.mark}</span>
-                  <span className="work-art-orbit" />
-                  <span className="work-art-shape" />
-                  <span className="work-art-caption">PROJECT / {project.mark}</span>
+          <div className="experience-list">
+            {experiences.map((experience, index) => (
+              <article className="experience-entry" key={experience.title}>
+                <span className="experience-number">0{index + 1}</span>
+                <div className="experience-image">
+                  <Image src={experience.image} alt={experience.imageAlt} fill sizes="(max-width: 650px) 84vw, 38vw" />
+                  <span className="glass-image-label">{experience.imageLabel}</span>
                 </div>
-                <div className="work-meta">
-                  <div>
-                    <span className="work-category">{project.category}</span>
-                    <h3>{project.title}</h3>
-                  </div>
-                  <span className="work-arrow" aria-hidden="true">
-                    ↗
-                  </span>
+                <div>
+                  <h3>{experience.title}</h3>
+                  <p>{experience.description}</p>
                 </div>
-                <p className="work-note">{project.note}</p>
-              </Link>
+              </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="ways" id="ways">
-        <div className="section-shell">
-          <div className="section-label">
-            <span>04</span> WAYS TO WORK
-          </div>
-          <div className="ways-heading">
-            <h2>
-              Flexible support,
-              <br />
-              <em>chosen around you.</em>
-            </h2>
-            <p>Choose the rhythm that best fits your workflow and the kind of help you need.</p>
-          </div>
-
-          <div className="ways-grid">
-            {supportOptions.map((option) => (
-              <Link className="way-card" href={`/ways/${option.slug}`} key={option.slug}>
-                <span>{option.label}</span>
-                <h3>{option.title}</h3>
-                <p>{option.detail}</p>
-                <i>
-                  LEARN MORE <b aria-hidden="true">↗</b>
-                </i>
-              </Link>
-            ))}
-          </div>
-
-          <p className="fine-print">Helpful arrangements for ongoing, flexible, or bespoke support.</p>
         </div>
       </section>
 
       <section className="testimonials" id="testimonials">
         <div className="section-shell testimonial-shell">
           <div className="section-label">
-            <span>05</span> KIND WORDS
+            <span>03</span> KIND WORDS
           </div>
           <div className="testimonial-content">
             <div className="quote-mark">“</div>
             <p>
-              Jorgilla brings a thoughtful, steady presence to the work behind the scenes. The details feel cared for, the communication is easy, and the whole experience feels more spacious.
+              Even as interns, a simple ‘thank you’ means so much to us as hotel staffs. These kind words make us feel appreciated and remind us that we have successfully fulfilled the guests' wants and needs. It gives us a sense of fulfillment and reassurance that we are performing our duties well and providing the quality service that every guest deserves.
             </p>
-            <div className="testimonial-credit">
-              <strong>CLIENT TESTIMONIAL</strong>
-              <span>—</span>
-              SAMPLE NOTE
-            </div>
-            <small>Replace with a real quote, permissioned testimonial, or short client feedback.</small>
-            <DraftPrompt label="Add a testimonial" copy="Add a real quote, the client role, and any context you can share with permission." />
-          </div>
-        </div>
-      </section>
-
-      <section className="process" id="process">
-        <div className="section-shell">
-          <div className="section-label">
-            <span>06</span> PROCESS
-          </div>
-          <div className="process-heading">
-            <h2>
-              A simple rhythm,
-              <br />
-              <em>built for clarity.</em>
-            </h2>
-            <p>Thoughtful process steps that keep communication easy and the work moving with less friction.</p>
-          </div>
-
-          <div className="steps">
-            {steps.map((step) => (
-              <div className="step" key={step.number}>
-                <div className="step-number">{step.number}</div>
-                <div className="step-line" />
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="faq" id="faq">
-        <div className="section-shell faq-grid">
-          <div>
-            <div className="section-label">
-              <span>07</span> FAQ
-            </div>
-            <h2>
-              A few answers,
-              <br />
-              <em>before we begin.</em>
-            </h2>
-          </div>
-
-          <div className="faq-list">
-            {questions.map((item) => (
-              <details key={item.q}>
-                <summary>
-                  {item.q}
-                  <span aria-hidden="true">＋</span>
-                </summary>
-                <p>{item.a}</p>
-              </details>
-            ))}
           </div>
         </div>
       </section>
@@ -332,7 +163,7 @@ export default function Home() {
             hello
           </div>
           <div className="section-label">
-            <span>08</span> LET’S TALK
+            <span>04</span> LET’S TALK
           </div>
           <div className="contact-content">
             <div className="contact-copy">
@@ -387,11 +218,11 @@ export default function Home() {
           </span>
           <span className="brand-name">
             JORGILLA FERNANDEZ
-            <span>VIRTUAL ASSISTANT</span>
+            <span>TOURISM &amp; HOSPITALITY</span>
           </span>
         </Link>
         <p>Thoughtful support, with care.</p>
-        <Link className="footer-top" href="#top">
+        <Link className="footer-top" href="#home">
           BACK TO TOP ↑
         </Link>
         <div className="footer-legal">
@@ -406,5 +237,6 @@ export default function Home() {
         </div>
       </footer>
     </main>
+    </PortfolioIntro>
   );
 }

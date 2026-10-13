@@ -1,29 +1,19 @@
-export const services = [
-  { slug: "executive-support", number: "01", title: "Executive support", text: "A little more order around your day, from inbox and calendar organization to thoughtful meeting preparation.", items: ["Inbox organization", "Calendar coordination", "Meeting preparation"] },
-  { slug: "operations-projects", number: "02", title: "Operations & projects", text: "Keep the details moving with clear coordination, careful follow-through, and useful systems.", items: ["Project tracking", "Research", "Process documentation"] },
-  { slug: "client-experience", number: "03", title: "Client experience", text: "Make every touchpoint feel considered with responsive communication and reliable admin support.", items: ["Client communications", "CRM updates", "Document preparation"] },
+export const experiences = [
+  {
+    title: "PTC Aviation Training Center",
+    image: "/images/ptc-aviation-training.jpeg",
+    imageAlt: "Jorgilla during flight attendant training at PTC Aviation Training Center.",
+    imageLabel: "FLIGHT ATTENDANT TRAINING",
+    description:
+      "I attended a one-day flight attendant training at PTC Aviation Training Center in Manila, where I gained firsthand experience in flight attendant procedures and operational duties. I participated in a seminar that highlighted the responsibilities of a flight attendant, including proper uniform standards, professional grooming, and ensuring passengers' safety, security, comfort, and needs. I also took part in various flight operation simulations, such as food and beverage service, making flight announcements, and learning the appropriate procedures to follow during emergencies.",
+  },
+  {
+    title: "JET Hotel Lipa",
+    image: "/images/jet-hotel-front-desk.jpeg",
+    imageAlt: "Jorgilla at the JET Hotel Lipa front desk.",
+    imageLabel: "FRONT OFFICE TRAINING",
+    description:
+      "Completed on-the-job training at JET Hotel Lipa, gaining practical experience in front office operations and guest services. Assisted with guest check-ins, check-outs, room reservations, and inquiries about hotel services and amenities. Answered phone calls, prepared reports, and organized key cards and food stubs to ensure smooth hotel operations. Performed graveyard shifts and assisted with hotel events and special celebrations. Developed strong communication, customer service, teamwork, and adaptability skills while maintaining professionalism and ensuring guest satisfaction.",
+  },
 ];
 
-export const projects = [
-  { slug: "a-calmer-week", number: "01", category: "SAMPLE CONCEPT · OPERATIONS", title: "A calmer week, by design.", note: "Example project — replace with a real client story.", tone: "sand", mark: "01" },
-  { slug: "details-that-delight", number: "02", category: "SAMPLE CONCEPT · CLIENT CARE", title: "The details that delight.", note: "Example project — replace with a real client story.", tone: "rose", mark: "02" },
-  { slug: "room-for-the-big-picture", number: "03", category: "SAMPLE CONCEPT · ADMIN SUPPORT", title: "Room for the big picture.", note: "Example project — replace with a real client story.", tone: "lilac", mark: "03" },
-];
-
-export const supportOptions = [
-  { slug: "monthly-partnership", label: "01 / ONGOING SUPPORT", title: "Monthly partnership", detail: "Add scope, hours, and rate" },
-  { slug: "hourly-assistance", label: "02 / FLEXIBLE SUPPORT", title: "Hourly assistance", detail: "Add hourly rate and minimum" },
-  { slug: "custom-support", label: "03 / BUILT AROUND YOU", title: "Custom support", detail: "Add project or package details" },
-];
-
-export const steps = [
-  { number: "01", title: "Start with a conversation", text: "Share what is taking up your time and what kind of support would make a difference." },
-  { number: "02", title: "Shape the support", text: "Together, clarify the priorities, tools, and working rhythm that suit your needs." },
-  { number: "03", title: "Make room to focus", text: "Settle into a thoughtful routine, with clear communication and steady follow-through." },
-];
-
-export const questions = [
-  { q: "What can I delegate?", a: "The service areas above are starting points. We can discuss your recurring admin, coordination, and client support needs and decide what fits." },
-  { q: "How do we get started?", a: "Send a note with a little context about your business and what you would like help with. We can take it from there." },
-  { q: "Are these work samples real client projects?", a: "No. The portfolio cards are clearly marked sample concepts because no client work or case studies have been provided yet." },
-];
